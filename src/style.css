@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    width: 100%;
+    height: auto;
+}
+.navbar{
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: transparent;
+    /* border: 1px solid gainsboro; */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    /* background-color: rgba(6, 6, 162, 0.774); */
+}
+.navbar>.logo{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: end; */
+    padding: 25px;
+    /* background-color: red; */
+}
+.logo>svg{
+    fill: white;
+    margin-left: 20px;
+}
+.navbar>.navlist{
+    width: 65%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.navlist>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    font-size: small;
+    font-family: sans-serif;
+}
+.navlist>ul>li:hover{
+ text-decoration: underline;
+ cursor: pointer;
+}
+.navbar>.menubar{
+    /* position: relative; */
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 50px;
+    gap: 30px;
+    font-size: small;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: white;
+    /* background-color: green; */
+}
+.menubar>span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+.videosection{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background-color: red; */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+  }
+  
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Ensure the video is in the background */
+  }
+  
+  .content {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 44%;
+    left: 5%;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    justify-content: center;
+    gap: 20px;
+    padding-left: 20px;
+    /* background-color: red; */
+  }
+  .content>h1{
+    text-align: start;
+    width: 100%;
+    height: auto;
+    font-size: 45px;
+    font-weight: 400;
+    /* background-color: blue; */
+  }
+  .content>button{
+   padding: 15px 50px;
+   background-color: transparent;
+   border: 2px solid white;
+   text-transform: uppercase;
+   cursor: pointer;
+   color: white;
+   font-weight: 600;
+   position: relative;
+   overflow: hidden;
+   transition: all 0.3s ease-in-out;
+  }
+  .content>button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    z-index: -1;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .content>button:hover::after{
+    top: 0%;
+  }
+  .content>button:hover{
+    color: black;
+  }
+
+  .image-container{
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    border-bottom: 2px solid black;
+    background-color: red;
+  }
+  footer{
+    width: 100%;
+    height: 78px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer>ul{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    list-style: none;
+    font-size: small;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    /* background-color: red; */
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+    .navbar>.logo {
+        width: 20rem;
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .navbar>.navlist {
+        width: 100%;
+    }
+    .navlist{
+      display: none;
+    }
+    .navbar>.menubar {
+        width: 100%;
+        justify-content: end;
+        padding-right: 2rem;
+    }
+
+    .content {
+        width: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+        padding: 10px;
+    }
+
+    .content>h1 {
+        font-size: 30px;
+    }
+
+    .content>button {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    footer>ul {
+        width: 80%;
+        font-size: smaller;
+    }
+
+    .video-container {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  .navlist{
+    display: none;
+  }
+  .shop{
+    display: none;
+  }
+  .bar{
+    position: absolute;
+    right: 3rem;
+  }
+  
+}
+
+
+
